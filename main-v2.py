@@ -7,7 +7,7 @@ from rich.columns import Columns
 from rich.prompt import Prompt
 from rich.theme import Theme
 
-# Тема оформлення
+
 custom_theme = Theme({
     "info": "dim cyan",
     "warning": "magenta",
@@ -32,14 +32,14 @@ def save_game_result(result, word, attempts):
 
 def get_hangman_stage(attempts_left):
     stages = [
-        "[danger]  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |[/]", # 0 - Програш
-        "[danger]  +---+\n  |   |\n  O   |\n /|\\  |\n /    |[/]", # 1
-        "[warning]  +---+\n  |   |\n  O   |\n /|\\  |\n      |[/]", # 2
-        "[warning]  +---+\n  |   |\n  O   |\n /|   |\n      |[/]", # 3
-        "[yellow]  +---+\n  |   |\n  O   |\n  |   |\n      |[/]", # 4
-        "[yellow]  +---+\n  |   |\n  O   |\n      |\n      |[/]", # 5
-        "[green]  +---+\n  |   |\n      |\n      |\n      |[/]", # 6
-        "[bold green]  +---+\n      |\n      |\n      |\n      |[/]"  # 7 - Початок
+        "[danger]  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |[/]",
+        "[danger]  +---+\n  |   |\n  O   |\n /|\\  |\n /    |[/]",
+        "[warning]  +---+\n  |   |\n  O   |\n /|\\  |\n      |[/]",
+        "[warning]  +---+\n  |   |\n  O   |\n /|   |\n      |[/]",
+        "[yellow]  +---+\n  |   |\n  O   |\n  |   |\n      |[/]",
+        "[yellow]  +---+\n  |   |\n  O   |\n      |\n      |[/]",
+        "[green]  +---+\n  |   |\n      |\n      |\n      |[/]",
+        "[bold green]  +---+\n      |\n      |\n      |\n      |[/]"
     ]
     return stages[attempts_left]
 
